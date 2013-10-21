@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+  <!--h1><%= @category.name %></h1-->
+<div id="pics">
+<div class="logo2">
+          <%= link_to image_tag(@set.logo), root_path %>
+
+</div>
+  <!--%= image_tag @category.image_url(:thumb).to_s %-->
+<!--div id="masonry" class="js-masonry"
+  data-masonry-options='{ "columnWidth": 310, "itemSelector": ".item" }'-->
+  <div id="tiles">
+  <% @cat_images.each do |img| %>
+    <li><!--div class="item"--><%= link_to image_tag(img.photo_url(:thumb)), img.photo_url(:full), :class => 'colorbox' %><!--/div--></li>
+  <% end %>
+  </div>
+<!--/div-->
+<!--p>
+  <%= @category.description %>
+</p-->
+
+<!--%= link_to 'Edit', edit_category_path(@category) %-->
+<!--%= link_to 'Back', categories_path %-->
+<script>
+jQuery("a.colorbox").colorbox();
+
+  
+    $(document).ready(new function() {
+      // Prepare layout options.
+      var options = {
+        autoResize: true, // This will auto-update the layout when the browser window is resized.
+        container: $('#pics'), // Optional, used for some extra CSS styling
+        offset: 2, // Optional, the distance between grid items
+        itemWidth: 250 // Optional, the width of a grid item
+      };
+
+      // Get a reference to your grid items.
+      var handler = $('#tiles li');
+
+      // Call the layout function.
+	  $(window).load(function() {
+      handler.wookmark(options);
+	  });
+
+      });
+  
+</script>

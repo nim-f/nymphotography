@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Site name:</strong>
+  <%= @setting.site_name %>
+</p>
+
+<p>
+  <strong>Site descr:</strong>
+  <%= @setting.site_descr %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @setting.logo %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @setting.phone %>
+</p>
+
+<p>
+  <strong>Skype:</strong>
+  <%= @setting.skype %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @setting.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @setting.address %>
+</p>
+
+<p>
+  <strong>Map:</strong>
+  <%= @setting.map %>
+</p>
+
+<%= link_to 'Edit', edit_setting_path(@setting) %> |
+<%= link_to 'Back', settings_path %>

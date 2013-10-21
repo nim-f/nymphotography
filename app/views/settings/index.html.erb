@@ -1,0 +1,41 @@
+<h1>Listing settings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Site name</th>
+      <th>Site descr</th>
+      <th>Logo</th>
+      <th>Phone</th>
+      <th>Skype</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Map</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @settings.each do |setting| %>
+      <tr>
+        <td><%= setting.site_name %></td>
+        <td><%= setting.site_descr %></td>
+        <td><%= setting.logo %></td>
+        <td><%= setting.phone %></td>
+        <td><%= setting.skype %></td>
+        <td><%= setting.email %></td>
+        <td><%= setting.address %></td>
+        <td><%= setting.map %></td>
+        <td><%= link_to 'Show', setting %></td>
+        <td><%= link_to 'Edit', edit_setting_path(setting) %></td>
+        <td><%= link_to 'Destroy', setting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Setting', new_setting_path %>
