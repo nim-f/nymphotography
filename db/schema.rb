@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131021195910) do
+ActiveRecord::Schema.define(version: 20131021195427) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -74,12 +74,6 @@ ActiveRecord::Schema.define(version: 20131021195910) do
     t.text     "map"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "category_image_width"
-    t.integer  "category_image_height"
-    t.integer  "photo_thumb_width"
-    t.integer  "photo_thumb_height"
-    t.integer  "photo_image_width"
-    t.integer  "photo_image_height"
   end
 
 end

@@ -32,18 +32,19 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  set = Setting.find(1)
-  version :thumb do
-     process :resize_to_limit => [set.photo_thumb_width, 0]
-  end
 
-  version :full do
-     process :resize_to_limit => [set.photo_image_width, 0]
-  end
+#  set = Setting.find(1)
+ # version :thumb do
+  #   process :resize_to_limit => [set.photo_thumb_width, 0]
+ # end
 
-  version :category_thumb do
-     process :resize_to_limit => [set.category_image_width, 0]
-  end
+ # version :full do
+  #   process :resize_to_limit => [set.photo_image_width, 0]
+ # end
+
+ # version :category_thumb do
+  #   process :resize_to_limit => [set.category_image_width, 0]
+ # end
 
   # version :thumb do
   #   process :scale => [50, 50]

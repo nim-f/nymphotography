@@ -1,6 +1,4 @@
 Album::Application.routes.draw do
-  resources :settings
-
   resources :categories
 
   resources :photos

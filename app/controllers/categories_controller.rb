@@ -5,14 +5,14 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all
-    @set = Setting.find(1)
+
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
     @cat_images = Photo.find(:all, :conditions => [ "category_id = :c", { :c => @category.id }])
-    @set = Setting.find(1)
+
   end
 
   # GET /categories/new
